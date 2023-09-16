@@ -22,7 +22,7 @@ const Feed = () => {
           })
           .then(data => {
             const unstructuredData = data.features;
-            const finalCoordinatesData = unstructuredData.map(item => { return item.geometry.coordinates.slice(0,2).reverse().join('%2C') }).slice(0,5).join('%7Cvia-ff0000-sm||');
+            const finalCoordinatesData = unstructuredData.map(item => { return item.geometry.coordinates.slice(0,2).reverse().join('%2C') }).slice(0,3).join('%7Cvia-ff0000-sm||');
             setCordinatesData(finalCoordinatesData);
             const finalStatisticsData = unstructuredData.map(item => { return [item.properties.mag, item.properties.time, item.properties.depth, item.properties.flynn_region] });
             setStatisticsData(finalStatisticsData)
@@ -38,11 +38,10 @@ const Feed = () => {
     }, []);
 
   return (
-    <section className='flex flex-row w-full justify-between'>
+    <div className='flex flex-row w-full justify-between'>
       <Statistics StatisticsData={StatisticsData} />
       <Map cordinatesData={cordinatesData} />
-
-    </section>
+    </div>
   )
 }
 
