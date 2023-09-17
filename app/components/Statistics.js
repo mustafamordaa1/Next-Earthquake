@@ -13,19 +13,19 @@ const Statistics = ({StatisticsData}) => {
 
   const data = StatisticsData?.slice(0,3).map((item, index) => (
     <div className='flex flex-row justify-between border-solid w-full p-2 shadow-md shadow-main-700/50 text-xl font-thin leading-normal rounded-lg hover:shadow-main-600/90 hover:border-2 & border-main' key={index}>
-    <div>
-      <span className='flex flex-row text-main text-2xl items-start'>
+    <div className='pe-8'>
+      <span className='flex flex-row text-main text-xl items-start'>
       <Image
             src="/pin.svg"
             alt="Logo"
-            width={25}
-            height={25}
+            width={22}
+            height={22}
             priority
           /> <p>{item[3]}</p> <br />
       </span>
       <span className='flex flex-row items-top gap-1 ms-6'>
-          <p>magnitude: <span className='text-main text-2xl me-4'>{item[0]}</span></p>
-          <p>depth: <span className='text-main text-2xl'>{item[2]}</span> KM</p>
+          <p>magnitude: <span className='text-main text-xl me-4'>{item[0]}</span></p>
+          <p>depth: <span className='text-main text-xl'>{item[2]}</span> KM</p>
       </span>
     </div>
    <span className='text-sm text-accent2 float-right text-right'> since {convertTime(item[1])}</span></div>

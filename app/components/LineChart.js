@@ -32,21 +32,28 @@ const LineChart = ({chartData}) => {
       }
 
   return (
-    <div>
-        <Line style={{display: 'block', boxSizing: 'borderBox', height: '450px', width: '600px'}}
-        data={{
-            labels: chartData ? transposeList(chartData)[1].map(item => item.slice(11,16)).reverse() : "" ,
-            datasets: [
-            {
-                data: chartData ? transposeList(chartData)[0].reverse() : "",
-                backgroundColor: function(context) {
-                    const index = context.dataIndex;
-                    const value = context.dataset.data[index];
-                    return value < 2 ? 'green' : 'red';},
-            },
-            ],
-        }}
-        />
+    <div style={{ width: '700px', height: '400px' }} >
+      <Line
+      data={{
+          labels: chartData ? transposeList(chartData)[1].map(item => item.slice(11,16)).reverse() : "" ,
+          datasets: [
+          {
+              data: chartData ? transposeList(chartData)[0].reverse() : "",
+              backgroundColor: function(context) {
+                  const index = context.dataIndex;
+                  const value = context.dataset.data[index];
+                  return value < 2 ? 'green' : 'red';},
+          },
+          ],
+      }}
+      options = {{
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      }}  
+      />
     </div>
   )
 }

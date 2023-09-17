@@ -38,9 +38,15 @@ const Feed = () => {
     }, []);
 
   return (
-    <div className='flex flex-row w-full justify-between'>
-      <Statistics StatisticsData={StatisticsData} />
-      <Map cordinatesData={cordinatesData} />
+    <div className="flex flex-col w-full gap-40 py-10 px-20">
+      <section className='flex flex-row w-full justify-between items-center'>
+        <Statistics StatisticsData={StatisticsData} />
+        <Map cordinatesData={cordinatesData} />
+      </section>
+      <section className='flex flex-col gap-8 justify-center items-center'>
+        <p className='text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-main via-accent2 to-accent1'>Last 24H Earthquakes Graph</p>
+        <LineChart chartData={chartData} />
+      </section>
     </div>
   )
 }
