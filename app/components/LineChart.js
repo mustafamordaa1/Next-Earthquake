@@ -32,7 +32,7 @@ const LineChart = ({chartData}) => {
       }
 
   return (
-    <div style={{ width: '700px', height: '400px' }} >
+    <div className="flex justify-center w-full" >
       <Line
       data={{
           labels: chartData ? transposeList(chartData)[1].map(item => item.slice(11,16)).reverse() : "" ,

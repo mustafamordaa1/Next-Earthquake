@@ -26,3 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.wiggle {
+  animation: wiggle 0.5s infinite ease-in-out alternate;
+}

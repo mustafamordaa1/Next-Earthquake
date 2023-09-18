@@ -1,6 +1,7 @@
 import './globals.css'
 import { Anek_Odia } from 'next/font/google'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const inter = Anek_Odia({ subsets: ['latin'], weight: '600' })
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <main className="flex min-h-screen flex-col items-center justify-start">
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

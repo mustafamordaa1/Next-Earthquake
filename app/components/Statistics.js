@@ -12,10 +12,10 @@ const Statistics = ({StatisticsData}) => {
   }
 
   const data = StatisticsData?.slice(0,3).map((item, index) => (
-    <div className='flex flex-row justify-between border-solid w-full p-2 shadow-md shadow-main-700/50 text-xl font-thin leading-normal rounded-lg hover:shadow-main-600/90 hover:border-2 & border-main' key={index}>
+    <div className='flex flex-row justify-between border-solid w-full p-2 shadow-md shadow-main-700/50 text-xl font-thin leading-normal rounded-lg hover:shadow-main-600/90 ' key={index}>
     <div className='pe-8'>
       <span className='flex flex-row text-main text-xl items-start'>
-      <Image
+      <Image className='wiggle'
             src="/pin.svg"
             alt="Logo"
             width={22}
