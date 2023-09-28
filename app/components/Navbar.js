@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="lg:w-full md:w-full mx-auto px-4">
       <div className="flex items-center justify-between h-16">
         <div className="flex items-center">
           <Link href="#" className="flex-shrink-0 text-accent1-600">
@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <ul className="flex items-center space-x-4">
             <li><Link href="#" className="text-main hover:text-accent1-600">Home</Link></li>
-            <li><Link href="#" className="text-main hover:text-accent1-600">About</Link></li>
+            <li><Link href="map" className="text-main hover:text-accent1-600">Map</Link></li>
             <li><Link href="#" className="text-main hover:text-accent1-600">Services</Link></li>
             <li><Link href="#" className="text-main hover:text-accent1-600">Contact</Link></li>
           </ul>

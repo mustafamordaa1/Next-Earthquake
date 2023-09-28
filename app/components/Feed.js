@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import Map from './Map';
+import Map from './StaticMap';
 import Statistics from './Statistics';
 import LineChart from './LineChart';
 import Table from './Table';
@@ -57,8 +57,8 @@ const Feed = () => {
     }, []);
 
   return (
-    <div className="flex flex-col w-full gap-40 py-10 px-20">
-      <section className='flex flex-row w-full justify-between items-center'>
+    <div className="flex flex-col w-full lg:gap-40 md:gap-10 sm:gap-10 py-10 lg:px-20 md:px-5 sm:px-5">
+      <section className='flex lg:flex-row md:flex-col-reverse gap-10 sm:flex-col-reverse w-full justify-between items-center'>
         <Statistics StatisticsData={StatisticsData} />
         <Map cordinatesData={cordinatesData} />
       </section>
@@ -68,15 +68,15 @@ const Feed = () => {
             alt="Logo"
             width={40}
             height={40}
-            priority
+            prior
           />
       </span>
-      <section className='flex flex-row w-full gap-20 justify-between items-start'>
-        <div className='flex flex-col w-1/2 gap-8 justify-center items-center'>
+      <section className='flex lg:flex-row md:flex-col sm:flex-col w-full gap-20 justify-between items-start'>
+        <div className='flex flex-col lg:w-1/2 md:w-full sm:w-full gap-8 justify-center items-center'>
           <p className='text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-main via-accent2 to-accent1'>Last 24H Strongest Earthquakes</p>
           <Table tableData={tableData} />
         </div>
-        <div className='flex flex-col w-1/2 gap-8 justify-center items-center'>
+        <div className='flex flex-col lg:w-1/2 md:w-full sm:w-full gap-8 justify-center items-center'>
           <p className='text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-main via-accent2 to-accent1'>Last 24H Earthquakes Graph</p>
           <LineChart chartData={chartData} />
         </div>

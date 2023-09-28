@@ -22,6 +22,9 @@ module.exports = {
         'custom': 'inset 0 8px 10px -12px rgba(97,25,117, 0.3)',
       }
       ,
+      screens: {
+        'sm': '100px',
+      },
     },
   },
   plugins: [],
