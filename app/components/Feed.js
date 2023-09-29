@@ -68,7 +68,6 @@ const Feed = () => {
             alt="Logo"
             width={40}
             height={40}
-            prior
           />
       </span>
       <section className='flex lg:flex-row md:flex-col sm:flex-col w-full gap-20 justify-between items-start'>

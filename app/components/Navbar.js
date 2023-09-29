@@ -13,15 +13,14 @@ const Navbar = () => {
             alt="Logo"
             width={150}
             height={25.5}
-            priority
           />
           </Link>
         </div>
         <div className="hidden md:block">
           <ul className="flex items-center space-x-4">
-            <li><Link href="#" className="text-main hover:text-accent1-600">Home</Link></li>
+            <li><Link href="/" className="text-main hover:text-accent1-600">Home</Link></li>
             <li><Link href="map" className="text-main hover:text-accent1-600">Map</Link></li>
-            <li><Link href="#" className="text-main hover:text-accent1-600">Services</Link></li>
+            <li><Link href="services" className="text-main hover:text-accent1-600">Services</Link></li>
             <li><Link href="#" className="text-main hover:text-accent1-600">Contact</Link></li>
           </ul>
         </div>
